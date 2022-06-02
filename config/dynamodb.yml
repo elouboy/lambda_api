@@ -1,0 +1,22 @@
+#
+# Creates the DynamoDB tables
+#
+# Setup Users Table
+UsersDynamoDbTable:
+  Type: 'AWS::DynamoDB::Table'
+  DeletionPolicy: Retain
+  Properties:
+    TableName: ${self:provider.environment.TABLENAME_VIDEOS}
+    AttributeDefinitions:
+      - AttributeName: challengeId
+        AttributeType: S
+      - AttributeName: userId
+        AttributeType: S
+    KeySchema:
+      - AttributeName: challengeId
+        KeyType: HASH
+      - AttributeName: userId
+        KeyType: RANGE
+    ProvisionedThroughput:
+      ReadCapacityUnits: 1
+      WriteCapacityUnits: 1

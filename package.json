@@ -1,0 +1,37 @@
+{
+  "name": "serverless-dynamodb-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "jest": {
+    "setupFiles": [
+      "dotenv/config"
+    ]
+  },
+  "scripts": {
+    "start": "sls offline start --skipCacheInvalidation --STAGE test --region localhost",
+    "deploy": "sls deploy --aws-profile ownelhouu --STAGE test --region us-east-1",
+    "remove": "sls remove --aws-profile ownelhouu --STAGE test --region us-east-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.739.0",
+    "bcryptjs": "^2.4.3",
+    "file-type": "^15.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "middy": "^0.36.0",
+    "mime-types": "^2.1.27",
+    "uuid": "^8.3.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "axios": "^0.20.0",
+    "jest": "^26.4.2",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^3.33.0",
+    "serverless-s3-local": "^0.6.7"
+  }
+}

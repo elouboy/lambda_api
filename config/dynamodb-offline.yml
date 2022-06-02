@@ -1,0 +1,13 @@
+#
+# Sets up the configuration for offline DynamoDB
+#
+start:
+  port: ${self:provider.environment.LOCAL_DB_PORT}
+  inMemory: true
+  migrate: true
+  seed: true
+seed:
+  test:
+    sources:
+      - table: ${self:provider.environment.TABLENAME_VIDEOS}
+        sources: [database/seeds/videos.json]
