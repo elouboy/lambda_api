@@ -1,18 +1,16 @@
-# Serverless JWT Auth Boilerplate by Daniel Abib
+This project contains Apis for a video sharing app. These Apis will perform CRUD operations and upload video to a S3 bucket. After the upload it will trigger a step function to transcode a video and store it in a new S3 bucket.
+The tech stack:
+- Aws lambda
+- Aws step functions
+- Aws dynamodb
+- Aws S3
 
-A [Serverless](https://serverless.com/) REST API boilerplate for authenticating with email/password over JWT (JSON Web Tokens) using
-AWS DynamoDB and DynamoDB local as database
-
----
 
 # 0. Installation
 
 ```bash
 # Install the Serverless CLI
 npm install serverless (maybe sudo is required)
-
-# Clone the repo
-git clone https://github.com/dcabib/serverless-jwt-auth serverless-jwt-auth
 
 # Install dependencies
 cd serverless-jwt-auth && npm install
